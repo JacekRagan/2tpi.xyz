@@ -151,6 +151,7 @@ body .vertical-centered-box {
 
 .announce-top {
   width: 100%;
+  display: none;
   height: 70px;
 }
 
@@ -228,14 +229,14 @@ nav {
   float: left;
 }
 
-.hrefs a {
+#hrefs a {
   float: right;
   color: white;
   margin: 10px;
   margin-top: 26px;
   text-decoration: none;
 }
-.hrefs a:hover {
+#hrefs a:hover {
   border-bottom: 1px solid;
 }
 
@@ -314,7 +315,7 @@ nav {
   margin-top: 150px;
   margin-left: calc(35% - 70px);
   position: absolute;
-  width: calc(60vh - 80px);
+  width: 375px;
   float: left;
 }
 .left a {
@@ -494,9 +495,7 @@ nav {
   z-index: 1;
 }
 
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
+.menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -523,7 +522,6 @@ nav {
   top: 0;
   right: -100%;
   width: 170px;
-  height: 300px;
   padding: 30px 0;
   list-style: none;
   background-color: #ECEFF1;
@@ -534,8 +532,7 @@ nav {
 .menu__item {
   display: block;
   margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -574,12 +571,129 @@ nav {
   padding-top: 134px;
 }
 
+.fas {
+  margin-top: 4px;
+  margin-left: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.flag-icon img {
+  margin-top: 8px;
+  width: 24px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.flag-text h4 {
+  cursor: pointer;
+  margin-top: 2px;
+  color: white;
+}
+
+.flag-text2 h4 {
+  cursor: pointer;
+  margin-top: 2px;
+  color: black;
+}
+
+#lang-divgrid {
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 20px;
+  display: flex;
+}
+
+#lang-divgrid2 {
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 20px;
+  display: flex;
+}
+
+#lang-divgrid2 .fas {
+  margin-top: 4px;
+  margin-left: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+#dropdown {
+  margin-left: 10px;
+  margin-top: 4px;
+  display: none;
+  border-radius: 8px;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background-color: #ECEFF1;
+}
+#dropdown img {
+  width: 24px;
+  margin-top: 6px;
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 16px;
+}
+#dropdown h4 {
+  font-weight: 400;
+  color: black;
+}
+
+#dropdown2 {
+  margin-top: 4px;
+  display: none;
+  border-radius: 8px;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background-color: #ECEFF1;
+}
+#dropdown2 img {
+  width: 24px;
+  margin-top: 6px;
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 16px;
+}
+#dropdown2 h4 {
+  font-weight: 400;
+  color: black;
+}
+
+.lang-div {
+  margin-left: 10px;
+  float: right;
+  position: relative;
+  bottom: 4px;
+}
+
+.lang-div2 {
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  bottom: 4px;
+}
+
+.dropdown-content {
+  display: flex;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dropdown-content:hover {
+  background-color: rgba(79, 84, 92, 0.16);
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 2560px) {
   .divgridinfobox a {
     margin-top: 130px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1055px) {
   .banner1 {
     display: none;
   }
@@ -590,11 +704,11 @@ nav {
     width: 60%;
   }
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1152px) {
   .hamburgernone {
     display: initial;
   }
-  .hrefs {
+  #hrefs {
     display: none;
   }
   .divgrid-gridoutside img {
@@ -602,6 +716,9 @@ nav {
   }
   #divgrid h1 {
     padding-top: 30px;
+  }
+  .lang-div {
+    display: none;
   }
 }
 @media screen and (max-width: 870px) {
@@ -732,7 +849,6 @@ nav {
   }
   .menu__box {
     width: 160px;
-    height: 270px;
   }
   .menu__item {
     font-size: 15px;
