@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Gryf Jaganowo</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+	</script>
+	<link href="images/logo.png" rel="icon" type="image/x-icon">
+	<meta name="description" content="Hub poświęcony epickim projektom. Twórcami strony jest Jacek Ragan i Przemysław Ćwil">
+	<link href="styles/style.css" rel="stylesheet">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z6ZBGJQ6D">
+	</script>
+	<script>
+	   window.dataLayer = window.dataLayer || [];
+	   function gtag(){dataLayer.push(arguments);}
+	   gtag('js', new Date());
+
+	   gtag('config', 'G-2Z6ZBGJQ6D');
+	</script>
+</head>
+<body class="normalmode">
+	<nav class="sticky" id="navbar">
+		<div class="other">
+			<p>GRYF JAGANOWO</p>
+		</div>
+		<div class="hamleft">
+			<div class="gear">
+				<div id="nav-container">
+					<div class="bg"></div>
+					<div class="button" tabindex="0">
+						<img draggable="false"  alt="" class="img" id="gearimg" src="images/gear_black.png">
+						<p>ustawienia</p>
+					</div>
+					<div id="nav-content" tabindex="0">
+						<img draggable="false"  alt="" class="skull" id="skullimg" src="images/skull_black.png">
+						<h2 id="mode-text"><span>Zmień motyw strony</span></h2><button class="dark-mode-toggle" id="dark-mode-toggle"><svg viewbox="0 0 496 496" width="100%" xmlns="http://www.w3.org/2000/svg">
+						<path class="primaryColor" d="M8,256C8,323,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,4" style="fill: none"></path></svg></button>
+						<h4 id="actual-mode">Aktualny motyw:</h4>
+						<h4 id="dark">Ciemny</h4>
+						<h4 id="light">Jasny</h4>
+						<h4 class="debug-mode-toggle" id="debug-mode-toggle" ><span onclick="debugmode()" id="debug-mode-toggle-span">Włącz debugowanie</span></h4>
+						<h3 id="troll-text">Dodatkowy motyw czeka na ciebie!</h3><button class="troll-mode-toggle" id="troll-mode-toggle"><svg viewbox="0 0 496 496" width="100%" xmlns="http://www.w3.org/2000/svg">
+						<path class="primaryColor" d="M8,256C8,323,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,4" style="fill: none"></path></svg></button>
+						<h3 id="troll"><span id="troll-span" onclick="troll()">Nie możesz się zdecydować?</span></h3>
+						<h4 id="trollerror">Nie możesz użyć tej opcji teraz.</h4>
+						<h3 id="solvetext">Rozwiąż te zadanie:</h3>
+						<h2 id="firsttask">1<sup>2</sup> + 2<sup>4</sup></h2>
+						<h2 id="secondtask">&#8730;9</h2>
+						<h2 id="thirdtask">log<sub>2</sub>16</h2><input id="inputnumber" onblur="answer()" required="" type="number">
+						<h2 id="tryagain">Spróbuj ponownie</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hamright">
+			<div class="hamright-content">
+				<div class="user">
+					<div class="column"><img draggable="false"  alt="" class="img" id="userimg" src="images/user_black.png"></div>
+					<p>konto</p>
+				</div>
+				<div class="cart">
+					<div class="column"><img  draggable="false" alt="" class="img" id="cartimg" src="images/cart1.png"></div>
+					<p>koszyk</p>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<a class="nav-content" href="../projects.html">
+			<h2>2tpi.xyz</h2></a> <a class="nav-content" href="">
+			<h2>Kontakt</h2></a> <a class="nav-content" href="">
+			<h2>Aktualności</h2></a> <a href="index.html"><img  draggable="false" alt="logo najelepszego klubu" id="logo" src="images/logo.png"></a> <a class="nav-content" href="">
+			<h2>Sklep kibica</h2></a> <a class="nav-content" href="">
+			<h2>Historia klubu</h2></a> <a class="nav-content" href="">
+			<h2>Zawodnicy</h2></a>
+		</div>
+	</nav>
+	<div id="nextpage">
+		<div class="ss-container">
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<div class="mySlides fade"><img  draggable="false" alt="" id="bnr1img" src="images/baner1.png"></div>
+			<div class="mySlides fade"><img draggable="false"  alt="" id="bnr2img" src="images/baner2.png"></div>
+			<div class="mySlides fade"><img  draggable="false" alt="" id="bnr3img" src="images/baner3.png"></div><a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			 <span class="dot" onclick="currentSlide(2)"></span> 
+			 <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+	</div>
+	<div id="nextpage-2">
+		<div id="slider-container">
+			<div class="content-slider-container">
+				<div id="slider">
+					<ul class="slides">
+						<li class="slide slide1"><img  draggable="false" alt="warning" id="warning1" src="images/warning.png"></li>
+						<li class="slide slide2"><img draggable="false"  alt="warning" id="warning2" src="images/warning.png"></li>
+						<li class="slide slide3"><img draggable="false"  alt="warning" id="warning3" src="images/warning.png"></li>
+						<li class="slide slide4"><img  draggable="false" alt="warning" id="warning4" src="images/warning.png"></li>
+						<li class="slide slide5"><img  draggable="false" alt="warning" id="warning5" src="images/warning.png"></li>
+						<li class="slide slide1"><img  draggable="false" alt="warning" id="warning6" src="images/warning.png"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="content-slider-container2">
+				<div id="slider2">
+					<ul class="slides2">
+						<li class="slide2 slide12"><img draggable="false"  alt="warning" id="warning7" src="images/warning.png"></li>
+						<li class="slide2 slide22"><img draggable="false"  alt="warning" id="warning8" src="images/warning.png"></li>
+						<li class="slide2 slide32"><img draggable="false"  alt="warning" id="warning9" src="images/warning.png"></li>
+						<li class="slide2 slide42"><img draggable="false"  alt="warning" id="warning10" src="images/warning.png"></li>
+						<li class="slide2 slide52"><img draggable="false"  alt="warning" id="warning11" src="images/warning.png"></li>
+						<li class="slide2 slide12"><img  draggable="false" alt="warning" id="warning12" src="images/warning.png"></li>
+					</ul>
+				</div>
+			</div>
+			<h1>WYPRZEDAŻ</h1>
+			<div id="sale">
+				<div class="sale-item1">
+					<img  draggable="false" alt="" src="images/bluza1.png">
+					<p class="item-name">Bluza ULTRAS</p>
+					<p class="prev-price"><del>400 zł</del></p>
+					<p class="promo-price">250 zł</p>
+				</div>
+				<div class="sale-item2">
+					<img draggable="false"  alt="" src="images/koszulka.png">
+					<p class="item-name">Koszulka fana</p>
+					<p class="prev-price"><del>250 zł</del></p>
+					<p class="promo-price">150 zł</p>
+				</div>
+				<div class="sale-item3">
+					<img  draggable="false" alt="" src="images/kosa.png">
+					<p class="item-name">Kosa rzezimieszka</p>
+					<p class="prev-price"><del>500 zł</del></p>
+					<p class="promo-price">300 zł</p>
+				</div>
+				<div class="sale-item4">
+					<img draggable="false"  alt="" src="images/kominiarka.png">
+					<p class="item-name">Kominiarka zadymiarza</p>
+					<p class="prev-price"><del>200 zł</del></p>
+					<p class="promo-price">100 zł</p>
+				</div>
+			</div>
+			<div id="container">
+				<button class="learn-more">
+					<span aria-hidden="true" class="circle">
+						<a href="shop.html">
+							<span class="icon arrow"></span>
+					</span> 
+					<span class="button-text">Zobacz więcej</span>
+				</a>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div id="nextpage-3">
+		<div id="matchpage">
+			<h1 class="nextmatchtext">NASTĘPNY MECZ</h1>
+			<h4 class="nextmatchtime"><span><em>Ćwierćfinał ligi mistrzów już za dwa dni w <strong>niedziele o 18:30!</strong></em></span></h4>
+			<div class="nextmatchbattle"><img draggable="false"  alt="" class="ksgimg" src="images/logo.png">
+			<h1 class="ksg">KSG</h1>
+			<img draggable="false"  src="images/vs.png" class="vs" id="vsimg" alt="">
+			<h1 class="psg">PSG</h1>
+			<img draggable="false" alt="" class="psgimg" src="images/psg.png"></div>
+			<img  draggable="false" src="images/funnytext.gif" alt="" class="funnytext">
+		</div><button class="btn-1"><a href="matches.html">Poprzednie mecze</a> </button>
+	</div>
+	<div id="nextpage-4">
+		<div id="newspage">
+			<h1>Najnowsze wiadomości </h1>
+		</div>
+		<button class="btn-2"><a href="news.html">Więcej wiadomości</a></button>
+	</div>
+	<div id="nextpage-5">
+		<div id="infopage">
+			
+			<h1 class="fronttext">Znajdujemy się tutaj</h1>
+			<h2 class="jaganowostore">Stacjonarny sklepik fana 
+				<br> Jaganowo jest otwarty 24/7h</h1>
+			<h1 class="stadiontext">Stadion LEGO arena Słupsk</h1>
+			
+			<h2 class="stadionlocation">Ul.Kilińskiego</h2>
+			<h2 class="stadionlocation">76-200 Słupsk</h2>
+			<button class="btn-3"><a href="contact.html">Skontaktuj się z nami</a></button>
+			<div class="container">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2319.5901311837797!2d17.02471681604144!3d54.45252119897906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fe1a0d817bebd5%3A0x980e268e6707329b!2sStadion%20Miejskiego%20Klubu%20Sportowego%20Gryf%20S%C5%82upsk!5e0!3m2!1spl!2spl!4v1654827042258!5m2!1spl!2spl" 
+			 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+			
+		</div>
+	</div>
+	<div id="nextpage-6">
+		<div id="filtr">
+		<div id="infopage">
+		<h1>Jak to się zaczeło</h1>
+		<h2>Poznaj historie klubu</h2>
+		<h1 class="bigtext">GRYF JAGANOWO</h1>
+		</div><button class="btn-2a"><a href="">Już wkrótce</a></button>
+		</div>
+	</div>
+	<div id="nextpage-7">
+		<div id="footer">
+			<div id="footer-fix">
+			<div class="info-footer">
+				<div class="app-icons">
+				<div class="left-info"><img  draggable="false" alt="logo" class="logo-footer" src="/images/logo.png">
+				<p>Gryf jaganowo</p>
+				<img  draggable="false" alt="Twitter logo" class="social-icon" id="twitter" src="/images/twitter.png">
+				<img  draggable="false" alt="Facebook logo" class="social-icon" id="facebook" src="/images/facebook.png"> 
+				<img  draggable="false" alt="Instagram logo" class="social-icon" id="instagram" src="/images/instagram.png">
+				</div>
+			</div>
+				<div class="right-info">
+					<p>Warszawa</p>
+					<p>Aleja Jana Pawła II 32</p>
+					<p>00-141</p><br>
+					<p>+48 77 628 981 456</p>
+				</div>
+				<div class="center-info">
+					<a href="offer.html">
+					<h2>Strona główna</h2></a> <a href="opinions.html">
+					<h2>Kontakt</h2></a> <a href="contact.html">
+					<h2>Aktualności</h2></a> <a href="#sec-2">
+					<h2>Skelp kibica</h2></a> <a href="">
+					<h2>Historia klubu</h2></a> <a href="">
+					<h2>Zawodnicy</h2></a>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<script src="scripts/script.js">
+	</script> 
+	<script src="scripts/lightmode.js">
+	</script> 
+	<script src="scripts/slider.js">
+	</script>
+	<script src="scripts/debugmode.js">
+	</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+let debugMode = localStorage.getItem('debugMode');
+const debugModeToggle = document.querySelector('#debug-mode-toggle');
+var first_click = true;
+var elems = document.body.getElementsByTagName("*");
+const enableDebugMode = () => {
+	document.body.classList.add('debugmode');
+	var elems2 = document.getElementById("nav-troll").style.outline = 
+	
+	localStorage.setItem('debugMode', 'enabled');
+}
+const disableDebugMode = () => {
+	document.body.classList.remove('debugmode');
+	localStorage.setItem('debugMode', null);
+}
+
+
+function debug() {
+	
+}
+
+
+if (debugMode === 'enabled') {
+	enableDebugMode();
+}
+
+debugModeToggle.addEventListener('click', () => {
+	debugMode = localStorage.getItem('debugMode');
+	if (debugMode !== 'enabled') {
+		enableDebugMode();
+	} else {
+		disableDebugMode();
+	}
+});
+
+
+
+/*outline: 1px solid limegreen !important;*/
+
+let debugMode = localStorage.getItem('debugMode');
+const debugModeToggle = document.querySelector('#debug-mode-toggle');
+var first_click = true;
+const enableDebugMode = () => {
+	document.body.classList.add('debugmode');
+    document.documentElement.style.outline = ("1px solid limegreen !important")
+    document.documentElement.style.outline = ("1px solid limegreen !important")
+	localStorage.setItem('debugMode', 'enabled');
+    first_click = false;
+}
+const disableDebugMode = () => {
+	document.body.classList.remove('debugmode');
+    document.documentElement.style.outline = "none";
+	localStorage.setItem('debugMode', null);
+    first_click = true;
+}
+if (debugMode === 'enabled') {
+	enableDebugMode();
+}
+debugModeToggle.addEventListener('click', () => {
+	debugMode = localStorage.getItem('debugMode');
+	if (debugMode !== 'enabled') {
+		enableDebugMode();
+	} else {
+		disableDebugMode();
+	}
+});
+
+
+
