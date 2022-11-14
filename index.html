@@ -8,11 +8,11 @@
 	</script>
 	<meta content='width=device-width, initial-scale=1' name='viewport'>
 	<meta content="CodePen" name="apple-mobile-web-app-title">
-	<link href="images/logo.png" rel="icon">
+	<link href="images/2tpi-icon.png" rel="icon">
 	<title>Hub 2tpi</title>
-	<script src="https://kit.fontawesome.com/582f5bc4e8.js">
-	</script><!-- Google tag (gtag.js) -->
-
+	<script src="https://kit.fontawesome.com/582f5bc4e8.js"></script>
+	<meta name="description" content="Hub poświęcony epickim projektom. Twórcami strony jest Jacek Ragan i Przemysław Ćwil">
+	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z6ZBGJQ6D">
 	</script>
 	<script>
@@ -24,6 +24,7 @@
 	</script>
 </head>
 <body>
+	<div id="indexmain"></div>
 	<div id="result-iframe-wrap" role="main">
 		<div class="loader-wrapper">
 			<div class="vertical-centered-box" id="particles-background"></div>
@@ -33,7 +34,7 @@
 				<div class="loader-circle"></div>
 				<div class="loader-line-mask">
 					<div class="loader-line"></div>
-				</div><img alt="logo" height="60px" src="images/2tpi.png" width="100px"></div>
+				</div><img draggable="false" alt="logo" height="60px" src="images/2tpi.png" width="100px"></div>
 			</div>
 			<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js">
 			</script> 
@@ -76,18 +77,18 @@
 		<div id="container">
 			<div class="announce-top">
 				<div class="announce-top-content">
-					<img alt="" class="gryflogo" src="images/logo.png">
-					<p class="announce-top-text"><span class="announce-top-text-span"><b id="announce-top-text-b">Gryf jaganowo jest w rozwoju!</b><span id="announce-top-text">I jeszcze trochę pobędzie...</span></span></p><button class="announce-top-button" id="announce-top-button" onclick="location.href='gryf.html';" type="button">Zobacz więcej</button>
+					<img draggable="false"  alt="" class="gryflogo" src="images/logo.png">
+					<p class="announce-top-text"><span class="announce-top-text-span"><b id="announce-top-text-b">Gryf jaganowo jest w rozwoju!</b><span id="announce-top-text">I jeszcze trochę pobędzie...</span></span></p><button class="announce-top-button" id="announce-top-button" onclick="location.href='projects.html';" type="button">Zobacz więcej</button>
 				</div>
 			</div>
 			<div class="main">
 			<div class="menu-container">
 				<nav id="navbar">
 					<div id="nav-container">
-						<a href="index.html"><img alt="2tpi" height="80px" src="images/2tpi.png" width="140px"></a>
+						<a href="index.html"><img  draggable="false" alt="2tpi"  src="images/2tpi.png" id="nav-icon"></a>
 						<div class="hamburgernone">
 							<div class="hamburger-menu">
-								<input id="menu__toggle" type="checkbox"> <label class="menu__btn" for="menu__toggle"><span></span></label>
+								<input id="menu__toggle" type="checkbox"><label class="menu__btn" for="menu__toggle"><span></span></label>
 								<ul class="menu__box dd">
 									<li>
 										<a class="menu__item" href="devs.html" id="devs2">Developerzy</a>
@@ -107,18 +108,18 @@
 									<li style="list-style: none; display: inline">
 										<div class="lang-div2">
 											<div id="lang-divgrid2" onclick="selectlang()">
-												<div class="flag-icon"><img alt="" id="flag-icon" src="images/pl.png"></div>
+												<div class="flag-icon"><img draggable="false"  alt="" id="flag-icon" src="images/pl.png"></div>
 												<div class="flag-text2">
 													<h4 id="flag-text">Polski</h4>
 												</div><i class='fas' style='font-size:24px'>&#xf107;</i>
 											</div>
 											<div id="dropdown">
 												<div class="polishmini-mode-toggle dropdown-content" id="polishmini-mode-toggle">
-													<img alt="" src="images/pl.png">
+													<img  draggable="false" alt="" src="images/pl.png">
 													<h4>Polski</h4>
 												</div>
 												<div class="englishmini-mode-toggle dropdown-content" id="englishmini-mode-toggle">
-													<img alt="" src="images/en.png">
+													<img  draggable="false" alt="" src="images/en.png">
 													<h4>English, USA</h4>
 												</div>
 											</div>
@@ -129,18 +130,18 @@
 						</div>
 						<div class="lang-div">
 							<div id="lang-divgrid" onclick="selectlang()">
-								<div class="flag-icon"><img alt="" id="flag-icon2" src="images/pl.png"></div>
+								<div class="flag-icon"><img  draggable="false" alt="" id="flag-icon2" src="images/pl.png"></div>
 								<div class="flag-text">
 									<h4 id="flag-text2">Polski</h4>
 								</div><i class='fas' style='font-size:24px'>&#xf107;</i>
 							</div>
 							<div id="dropdown2">
 								<div class="polish-mode-toggle dropdown-content" id="polish-mode-toggle">
-									<img alt="" src="images/pl.png">
+									<img  draggable="false" alt="" src="images/pl.png">
 									<h4>Polski</h4>
 								</div>
 								<div class="english-mode-toggle dropdown-content" id="english-mode-toggle">
-									<img alt="" src="images/en.png">
+									<img  draggable="false" alt="" src="images/en.png">
 									<h4>English, USA</h4>
 								</div>
 							</div>
@@ -154,28 +155,35 @@
 			<div class="left">
 				<h1 class="main-text" id="main-text">Witaj na 2tpi.xyz!</h1>
 				<h3 class="bottom-text" id="bottom-text">Jesteśmy grupą, która pasjonuje się programowaniem i robienia z tego dużego hajsu.</h3><button class="main-button bc" id="main-button" onclick="location.href='projects.html';" type="button">Zobacz nasze projekty</button>
-			</div><img alt="" class="banner1" src="images/bannerpattern2.png"> <img alt="" class="banner2" src="images/bannerpattern.png"></div>
+			</div>
+			<img alt=""  draggable="false" class="banner1" src="images/bannerpattern2.png"> 
+			<img alt=""  draggable="false" class="banner2 big" id="banner2" src="images/bannerpattern.png">
+			<img alt="" draggable="false"  class="banner2 micro" id="banner2" src="images/microbannerpattern2.png">
+			
+		</div>
 		</div>
 		<div class="grid1" id="divgrid">
 			<div class="divgrid-gridoutside">
 			<div class="divgrid-gridinside">
 				<h1 id="divgrid-gridinside-h1">Poznaj epickich developerów</h1>
 				<p id="divgrid-gridinside-p">Jesteśmy zdolnymi i pomysłowymi twórcami wielu projektów, które zyskują dużą popularność przez nasze umiejętności promowania marki.</p>
-			</div><img alt="" class="bb" src="images/divgridbackground.png"> <img alt="" class="bn bm no" src="images/minidivgridbackground.png"></div>
+			</div>
+			<img  draggable="false"  alt="" class="bb" src="images/divgridbackground.png"> <img  draggable="false"  alt="" class="bn bm no" src="images/minidivgridbackground.png"></div>
 		</div>
 		<div class="grid2" id="divgrid">
 			<div class="divgrid-gridoutside">
 			<div class="divgrid-gridinside">
 				<h1 id="divgrid-gridinside-h12">Przejrzyj najnowsze wiadomości</h1>
 				<p id="divgrid-gridinside-p1">Różne informacje związane z naszą działalnością i znaczące dla nas wydarzenia będziemy postować tutaj.</p><button class="main-button ac" id="main-button2" onclick="location.href='news.html';" type="button">Zobacz wiadomości</button>
-			</div><img alt="" class="bb" src="images/divgridbackground2.png"> <img alt="" class="bn bm add" src="images/minidivgridbackground2.png"></div>
+			</div>
+			<img  draggable="false"  alt="" class="bb" src="images/divgridbackground2.png"> <img draggable="false"  alt="" class="bn bm add" src="images/minidivgridbackground2.png"></div>
 		</div>
 		<div class="grid3" id="divgrid">
 			<div class="divgridinfobox">
 				<a href="contact.html" id="contact3">Kontakt</a> <a href="skarbnik.html" id="skarbnik3">Skarbnik</a> <a href="news.html" id="news3">Wiadomości</a> <a href="projects.html" id="projects3">Projekty</a> <a href="devs.html" id="devs3">Developerzy</a>
 			</div>
 			<div class="divgridinfobottom">
-				<a href="index.html"><img alt="2tpi" src="images/2tpi.png"></a> <button class="main-button dc resize" id="main-button3" onclick="location.href='projects.html';" type="button">Zobacz nasze projekty</button>
+				<a href="index.html"><img  draggable="false"  alt="2tpi" src="images/2tpi.png"></a> <button class="main-button dc resize" id="main-button3" onclick="location.href='projects.html';" type="button">Zobacz nasze projekty</button>
 			</div>
 		</div>
 	</div>
